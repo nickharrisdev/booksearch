@@ -2,10 +2,10 @@
   "name": "booksearch",
   "version": "1.0.0",
   "description": "Find information on Books using Google Books API",
-  "main": "index.js",
+  "main": "books.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node books.js"
+    "test": "npm install <pkg>",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
