@@ -19,14 +19,16 @@ $(document).ready(function(){
 			$.get("https://www.googleapis.com/books/v1/volumes?q=" + searchTerms, function(response){
 				console.log(response);
 				
-				// gets book info 
+				// for loop to get relevant book info from JSON file
 
 				for(i=0; i<response.items.length; i++) {
 
-					title = $("<h5>" + response.items[i].volumeInfo.title + "</h5>");
-					author = $("<h5>" + response.items[i].volumeInfo.authors + "</h5>");
+					title = $("<h3>" + response.items[i].volumeInfo.title + "</h3>");
+					author = $("<h5>Author(s): " + response.items[i].volumeInfo.authors + "</h5>");
 					img = $("<img class='bookcover'><br><a href=" + response.items[i].volumeInfo.infoLink + "><button id='cover-button'>More info</button></a>")
 					url = response.items[i].volumeInfo.imageLinks.thumbnail;
+
+					//adds the newly found data to results section 
 
 					img.attr("src", url); 
 
