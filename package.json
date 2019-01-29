@@ -17,3 +17,7 @@
   },
   "homepage": "https://github.com/nickharriscodes/booksearch#readme"
 }
+
+"scripts": {
+  "start": "node server.js"
+}
