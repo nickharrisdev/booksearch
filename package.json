@@ -1,0 +1,19 @@
+{
+  "name": "booksearch",
+  "version": "1.0.0",
+  "description": "Find information on Books using Google Books API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickharriscodes/booksearch.git"
+  },
+  "author": "Nicholas Harris <nharris614@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickharriscodes/booksearch/issues"
+  },
+  "homepage": "https://github.com/nickharriscodes/booksearch#readme"
+}
