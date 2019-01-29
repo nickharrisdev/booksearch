@@ -5,7 +5,7 @@
   "main": "books.js",
   "scripts": {
     "test": "npm install <pkg>",
-    "start": "node server.js"
+    "start": "node books.js"
   },
   "repository": {
     "type": "git",
