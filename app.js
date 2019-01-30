@@ -6,6 +6,7 @@ const path = require('path');
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'app/books.js'));
 });
 
 app.listen(process.env.PORT || 4000, function(){
