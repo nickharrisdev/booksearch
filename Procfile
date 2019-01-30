@@ -1,1 +1,1 @@
-web: node app/books.js
+web: node books.js
