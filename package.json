@@ -14,7 +14,7 @@
   "author": "Nicholas Harris <nharris614@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.9.8",
+    "express": "6.4.1",
   "bugs": {
     "url": "https://github.com/nickharriscodes/booksearch/issues"
   },
