@@ -1,11 +1,13 @@
-var express = require(‘express’);
-var port = process.env.PORT || 3000;
-var app = express();
 
-app.get(‘/’, function (req, res) {
- res.send(JSON.stringify({ Hello: ‘World’}));
+
+const express = require('express');
+const app = express();
+const path = require('path');
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(port, function () {
- console.log(`Example app listening on port !`);
+app.listen(process.env.PORT || 4000, function(){
+    console.log('Your node js server is running');
 });
