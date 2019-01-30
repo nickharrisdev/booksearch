@@ -4,8 +4,7 @@
   "description": "Find information on Books using Google Books API",
   "main": "books.js",
   "scripts": {
-    "test": "npm install <pkg>",
-    "start": "node books.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
