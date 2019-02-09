@@ -12,6 +12,7 @@ $(document).ready(function(){
 
 			var title = "";
 			var author = "";
+			var publisher = "";
 			var img = "";
 			var url = "";
 
@@ -24,9 +25,11 @@ $(document).ready(function(){
 				for(i=0; i<response.items.length; i++) {
 
 					title = $("<h3>" + response.items[i].volumeInfo.title + "</h3>");
-					author = $("<h5>Author(s): " + response.items[i].volumeInfo.authors + "</h5>");
+					author = $("<h5>Author(s): " + response.items[i].volumeInfo.authors + " </h5>");
+					publisher = $("<h5>Publisher: " + response.items[i].volumeInfo.publisher + "</h5>");
 					img = $("<img class='bookcover'><br><a href=" + response.items[i].volumeInfo.infoLink + "><button id='cover-button'>More info</button></a>")
 					url = response.items[i].volumeInfo.imageLinks.thumbnail;
+					
 
 					//adds the newly found data to results section 
 
@@ -35,8 +38,11 @@ $(document).ready(function(){
 					title.appendTo("#results");
 
 					author.appendTo("#results");
+
+					publisher.appendTo("#results");
 					
 					img.appendTo("#results");
+
 				}
 
 			});
