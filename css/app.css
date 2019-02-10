@@ -11,6 +11,13 @@ body {
 #results {
     margin-right: auto;
     margin-left: auto;
+    padding-top: 50px;
+}
+
+#form {
+   background-color: gray;
+   padding-top: 5px;
+   padding-bottom: 5px;
 }
 
 .bookcover {
@@ -21,7 +28,7 @@ body {
   position: fixed;
   top: auto;
   left: auto;
-  z-index: 999;
+  text-align: center;
   width: 100%;
   height: 23px;
 }
