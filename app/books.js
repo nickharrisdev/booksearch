@@ -27,7 +27,7 @@ $(document).ready(function(){
 					title = $("<h3>" + response.items[i].volumeInfo.title + "</h3>");
 					author = $("<h5>Author(s): " + response.items[i].volumeInfo.authors + " </h5>");
 					publisher = $("<h5>Publisher: " + response.items[i].volumeInfo.publisher + "</h5>");
-					img = $("<img class='bookcover'><br><a href=" + response.items[i].volumeInfo.infoLink + "><button id='cover-button'>More info</button></a>")
+					img = $("<img class='bookcover'><br><a href=" + response.items[i].volumeInfo.infoLink + "><button id='cover-button'>More Info</button></a>")
 					url = response.items[i].volumeInfo.imageLinks.thumbnail;
 					
 
