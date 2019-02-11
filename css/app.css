@@ -14,6 +14,10 @@ label {
 
 }
 
+@-ms-viewport{
+  width: device-width;
+}
+
 #results {
     margin-right: auto;
     margin-left: auto;
@@ -32,12 +36,20 @@ label {
    color: white;
 }
 
+#book {
+  border: none;
+  font-size: 12px;
+  width: 240px;
+  padding-top: 5px;
+  padding bottom: 5px;
+}
+
 #cover-button {
   background-color: #f6f5f3;
   color: black;
   cursor: pointer; 
   transition-duration: 0.4s;
-  border: none;
+  border: 2px solid #3d3d3f;
   font-size: 15px;
 }
 
@@ -79,4 +91,18 @@ input[type=submit]:hover {
 
 .search-button {
   cursor: pointer;
+}
+
+.clear-search {
+  cursor: pointer;
+  background-color: #7dce94;
+  color: black;
+  border: 2px solid #f6f5f3;
+  font-size: 15px;
+  transition-duration: 0.4s;
+}
+
+.clear-search:hover {
+  background-color: #3d3d3f;
+  color: white;
 }
