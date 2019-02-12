@@ -34,7 +34,7 @@ function getBookinfo(searchTerms) {
 	$.get("https://www.googleapis.com/books/v1/volumes?q=" + searchTerms, function(response){
 		//log the response as a test
 		console.log(response);
-				
+
 		// for loop to get relevant book info from JSON file
 		for(i=0; i<response.items.length; i++) {
 
@@ -64,7 +64,6 @@ function appendResults() {
 	img.appendTo("#results");
 
 }
-
 
 //clear results functionality
 function clearResults() {
