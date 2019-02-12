@@ -6,6 +6,7 @@ var publisher = "";
 var img = "";
 var url = "";
 
+
 function init () {
 
 	$("#form").submit(function(){
@@ -35,7 +36,6 @@ function getBookinfo(searchTerms) {
 		console.log(response);
 				
 		// for loop to get relevant book info from JSON file
-
 		for(i=0; i<response.items.length; i++) {
 
 			title = $("<h3>" + response.items[i].volumeInfo.title + "</h3>");
@@ -62,8 +62,29 @@ function appendResults() {
 	publisher.appendTo("#results");
 					
 	img.appendTo("#results");
+
 }
 
+
+//clear results functionality
+function clearResults() {
+	$(".clear-search").on("click", function() {
+		$("#results").html("");
+		$("#book").val("");
+	});
+
+	$("#book").focus(function() {
+		$("#results").html("");
+	});
+
+	$("#book").keypress(function() {
+		$("#results").html("");
+	});
+}
+
+
+
+clearResults();
 init();
 
 
