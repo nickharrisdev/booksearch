@@ -1,55 +1,68 @@
-$(document).ready(function(){
+//---initial refactor---//
 
-	$("#form").submit(function(){
+	var title = "";
+	var author = "";
+	var publisher = "";
+	var img = "";
+	var url = "";
 
-		var searchTerms = $("#book").val();
+	function init () {
 
-		if (searchTerms === '') {
+		$("#form").submit(function(){
 
-			alert ("Please enter text into the search field.");
+			var searchTerms = $('#book').val();
 
-		} else {
+			if (searchTerms === '') {
 
-			var title = "";
-			var author = "";
-			var publisher = "";
-			var img = "";
-			var url = "";
+				alert ("Please enter text into the search field.");
 
-			
-			$.get("https://www.googleapis.com/books/v1/volumes?q=" + searchTerms, function(response){
-				console.log(response);
+			} else {
+
+				///call a function here
+				getBookinfo(searchTerms);
+
+			}
+
+		return false;
+
+		});
+	}
+
+	function getBookinfo(searchTerms) {
 				
-				// for loop to get relevant book info from JSON file
-
-				for(i=0; i<response.items.length; i++) {
-
-					title = $("<h3>" + response.items[i].volumeInfo.title + "</h3>");
-					author = $("<h5>Author(s): " + response.items[i].volumeInfo.authors + " </h5>");
-					publisher = $("<h5>Publisher: " + response.items[i].volumeInfo.publisher + "</h5>");
-					img = $("<img class='bookcover'><br><a href=" + response.items[i].volumeInfo.infoLink + "><button id='cover-button'>More Info</button></a>")
-					url = response.items[i].volumeInfo.imageLinks.thumbnail;
+		$.get("https://www.googleapis.com/books/v1/volumes?q=" + searchTerms, function(response){
+			console.log(response);
 					
+			// for loop to get relevant book info from JSON file
 
-					//adds the newly found data to results section 
+			for(i=0; i<response.items.length; i++) {
 
-					img.attr("src", url); 
+				title = $("<h3>" + response.items[i].volumeInfo.title + "</h3>");
+				author = $("<h5>Author(s): " + response.items[i].volumeInfo.authors + " </h5>");
+				publisher = $("<h5>Publisher: " + response.items[i].volumeInfo.publisher + "</h5>");
+				img = $("<img class='bookcover'><br><a href=" + response.items[i].volumeInfo.infoLink + "><button id='cover-button'>More Info</button></a>")
+				url = response.items[i].volumeInfo.imageLinks.thumbnail;
 
-					title.appendTo("#results");
+				//call function to append 
+				appendResults();
 
-					author.appendTo("#results");
+			}
+		});
+	}
 
-					publisher.appendTo("#results");
-					
-					img.appendTo("#results");
+	function appendResults() {
+		
+		img.attr("src", url); 
 
-				}
+		title.appendTo("#results");
 
-			});
+		author.appendTo("#results");
 
-		}
+		publisher.appendTo("#results");
+						
+		img.appendTo("#results");
+	}
 
-	return false;
+	init();
 
-	});
-});
+
