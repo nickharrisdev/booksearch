@@ -9,39 +9,21 @@ body {
     background-color: #3d3d3f;
 }
 
-label {
-  font-size: 20px;
-
-}
-
 @-ms-viewport{
   width: device-width;
 }
 
+/*------------------RESULTS------------------------- */
+
 #results {
     margin-right: auto;
     margin-left: auto;
-    padding-top: 55px;
+    padding-top: 100px;
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
     background-color: #f6f5f3;
     text-align: center;
-}
-
-#form {
-   background-color: #7dce94;
-   padding-top: 5px;
-   padding-bottom: 15px;
-   color: white;
-}
-
-#book {
-  border: none;
-  font-size: 12px;
-  width: 240px;
-  padding-top: 5px;
-  padding bottom: 5px;
 }
 
 #cover-button {
@@ -58,6 +40,33 @@ label {
   color: white;
 }
 
+.bookcover {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*----------------SEARCH FORM------------------*/
+
+label {
+  font-size: 20px;
+}
+
+#form {
+   background-color: #7dce94;
+   padding-top: 18px;
+   padding-bottom: 18px;
+   color: white;
+}
+
+#book {
+  border: none;
+  font-size: 12px;
+  width: 240px;
+  padding-top: 5px;
+  padding bottom: 5px;
+}
+
 input[type=submit] {
   cursor: pointer;
   background-color: #7dce94;
@@ -70,12 +79,6 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #3d3d3f;
   color: white;
-}
-
-.bookcover {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .search-area {
@@ -93,16 +96,29 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
+/*---------------CLEAR SEARCH FOOTER---------------*/
+
+#static-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 1;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
 .clear-search {
   cursor: pointer;
-  background-color: #7dce94;
-  color: black;
+  background-color: #3d3d3f;
+  color: white;
   border: 2px solid #f6f5f3;
   font-size: 15px;
   transition-duration: 0.4s;
+  text-align: center;
 }
 
 .clear-search:hover {
-  background-color: #3d3d3f;
-  color: white;
+  background-color: #f6f5f3;
+  color: black;
 }
