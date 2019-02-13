@@ -23,5 +23,9 @@
   "homepage": "https://github.com/nickharriscodes/booksearch#readme",
   "engines": {
     "node": "11.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-bundle-assets": "^2.29.0"
   }
 }
