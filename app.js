@@ -8,13 +8,9 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'app/books.js'));
-});
+app.use(express.static('app'));
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'css/app.css'));
-});
+app.use(express.static('css'));
 
 app.listen(process.env.PORT || 4000, function(){
     console.log('Your node js server is running');
