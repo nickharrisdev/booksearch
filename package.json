@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
-   },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nickharriscodes/booksearch.git"
@@ -14,7 +14,8 @@
   "author": "Nicholas Harris <nharris614@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "6.4.1"
+    "express": "^4.16.4",
+    "jasmine-jquery": "^2.1.1"
   },
   "bugs": {
     "url": "https://github.com/nickharriscodes/booksearch/issues"
@@ -22,8 +23,5 @@
   "homepage": "https://github.com/nickharriscodes/booksearch#readme",
   "engines": {
     "node": "11.1.0"
-  },
-  "dependencies": {
-    "express": "^4.16.4"
   }
 }
