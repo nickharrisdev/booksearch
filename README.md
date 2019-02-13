@@ -18,6 +18,10 @@ Also requires an up-to-date, modern browser to function.
 To use, simply enter the search query into the field at the top right of the page and either press the enter key or click the "Find Books" button. A list of several relevant books and corresponding information (title, author, cover image) will appear in the center of the page along with a button below each item that will take the user to a page with additional info. 
 
 
+## KNOWN BUGS
+
+Books with more than one author are displayed in a list without spaces after commas. A solution is in the works. 
+
 ## CONTACT INFO
 
 Nick Harris

@@ -52,7 +52,7 @@ function formatResults(response){
 			author = $("<h5>Author not listed</h5>");
 		}
 		else {
-			author = $("<h5 id='author'>Author(s): " + response.items[i].volumeInfo.authors + " </h5>");
+			author = $("<h5>Author(s): " + response.items[i].volumeInfo.authors + " </h5>");
 		}
 
 		if (response.items[i].volumeInfo.publisher === undefined) {
