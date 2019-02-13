@@ -35,20 +35,37 @@ function getBookinfo(searchTerms) {
 		//log the response as a test
 		console.log(response);
 
-		// for loop to get relevant book info from JSON file
-		for(i=0; i<response.items.length; i++) {
+		formatResults(response);
 
-			title = $("<h3>" + response.items[i].volumeInfo.title + "</h3>");
-			author = $("<h5>Author(s): " + response.items[i].volumeInfo.authors + " </h5>");
-			publisher = $("<h5>Publisher: " + response.items[i].volumeInfo.publisher + "</h5>");
-			img = $("<img class='bookcover'><br><a href=" + response.items[i].volumeInfo.infoLink + "><button id='cover-button'>More Info</button></a>")
-			url = response.items[i].volumeInfo.imageLinks.thumbnail;
-
-			//call function to append 
-			appendResults();
-
-		}
 	});
+}
+
+function formatResults(response){
+	// for loop to get relevant book info from JSON file
+	for(i=0; i<response.items.length; i++) {
+
+		title = $("<h3>" + response.items[i].volumeInfo.title + "</h3>");
+		img = $("<img class='bookcover'><br><a href=" + response.items[i].volumeInfo.infoLink + "><button id='cover-button'>More Info</button></a>")
+		url = response.items[i].volumeInfo.imageLinks.thumbnail;
+
+		if (response.items[i].volumeInfo.authors === undefined) {
+			author = $("<h5>Author not listed</h5>");
+		}
+		else {
+			author = $("<h5 id='author'>Author(s): " + response.items[i].volumeInfo.authors + " </h5>");
+		}
+
+		if (response.items[i].volumeInfo.publisher === undefined) {
+			publisher = $("<h5>Publisher not listed</h5>");
+		}
+		else {
+			publisher = $("<h5>Publisher: " + response.items[i].volumeInfo.publisher + "</h5>");
+		}
+
+		//call function to append 
+		appendResults();
+
+	}
 }
 
 function appendResults() {
