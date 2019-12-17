@@ -1,14 +1,20 @@
 # BOOK SEARCH 
 
-
 ## INTRODUCTION
 
-Book Search is a stripped down web search application which utilizes the Google Books API in order to pull up a list of books relating to a user's search query. 
+Book Search is a stripped down web search application which utilizes jQuery and Google Books API in order to pull up a list of books relating to a user's search query. 
 
 
 ## REQUIREMENTS
+To run this project locally, you will need to have node installed.
 
-Requires [Node.js](https://nodejs.org/en/) in your environment to edit. Head to the website for further installation instructions. 
+on OSX, install git and type brew install git
+on OSX, install home brew and type brew install node
+on Windows, use the installer available at nodejs.org
+Open the terminal
+Go to a folder where you would like to install the project. Then type the following to download the repo:
+
+`https://github.com/nickharriscodes/booksearch.git`
 
 Also requires an up-to-date, modern browser to function. 
 
@@ -20,14 +26,11 @@ To use, simply enter the search query into the field at the top right of the pag
 
 ## KNOWN BUGS
 
-Books with more than one author are displayed in a list without spaces after commas. A solution is in the works. 
+Books with more than one author are displayed in a list without spaces after commas.
 
 ## CONTACT INFO
 
-Nick Harris
-nharris614@gmail.com
-
-Reach out with any questions or requests please. 
+I would love to hear from you if you have ideas for ways to improve and expand upon this project. To contribute, simply fork this repo, make your changes and create a pull request with a short explanation of your work. Screenshots of any UI changes are appreciated!
 
 
 
