@@ -14,7 +14,7 @@
   "author": "Nicholas Harris <nharris614@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "jasmine-jquery": "^2.1.1"
   },
   "bugs": {
